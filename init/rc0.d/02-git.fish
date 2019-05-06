@@ -69,11 +69,11 @@ abbr --add glgg 'git log --graph'
 abbr --add glgga    'git log --graph --decorate --all'
 abbr --add glgm 'git log --graph --max-count=10'
 abbr --add glo  'git log --oneline --decorate'
-abbr --add glol="git log --graph --pretty   '%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-abbr --add glola="git log --graph --pretty  '%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
+abbr --add glol "git log --graph --pretty   '%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+abbr --add glola "git log --graph --pretty  '%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
 abbr --add glog 'git log --oneline --decorate --graph'
 abbr --add gloga    'git log --oneline --decorate --graph --all'
-abbr --add glp="_git_log_prettily"
+abbr --add glp "_git_log_prettily"
 # compdef _git glp=git-log
 
 abbr --add gm   'git merge'

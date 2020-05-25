@@ -2,6 +2,7 @@ define_command fdg "fishdots plugin for doing useful things with git"
 define_subcommand fdg save on_fdg_save "save all edits"
 define_subcommand fdg sync on_fdg_sync "save all edits then push to origin"
 define_subcommand_nonevented fdg release fdg_release "(<ver> <msg>) Update release version, tag and push"
+define_subcommand_nonevented fdg ed fdg_find_and_edit "find a file in the current repo and edit"
 
 function fdg_save -e on_fdg_save
     git add -A .
@@ -29,3 +30,9 @@ function fdg_release -a ver msg -d "a function to prepare a fishdots style relea
     git push origin --all
     git push origin --tags
 end
+
+function fdg_find_and_edit -d "fimd a file in the repo and edit it"
+  set -l file (rg --files (git root) | fzf)
+  eval "$EDITOR $file"
+end
+
